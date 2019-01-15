@@ -14,7 +14,6 @@ public abstract class User {
         for (Card card : cards) {
             Rank rank = card.getRank();
             if (rank.equals (ACE)) {
-                sum += 0;
                 aceN++;
             }
             if (rank.equals (JACK)|| rank.equals (QUEEN)||rank.equals (KING)) {
