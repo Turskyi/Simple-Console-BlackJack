@@ -6,7 +6,7 @@ import java.util.List;
 import static gamePackage.Rank.*;
 import static gamePackage.Rank.KING;
 
-public abstract class User {
+abstract class User {
     private List<Card> userDeck;
     private int userPoints(List<Card> cards){
         int aceN = 0;
@@ -17,7 +17,7 @@ public abstract class User {
                 aceN++;
             }
             if (rank.equals (JACK)|| rank.equals (QUEEN)||rank.equals (KING)) {
-                card.setPoints (10);
+                card.setPoints ( );
             }
             sum += card.getPoints ();
         }
@@ -27,16 +27,18 @@ public abstract class User {
         }
         return sum;
     }
-    public User() {
+    User() {
         userDeck = new ArrayList<> ();
     }
 
-    public List<Card> getUserDeck() {
+    List<Card> getUserDeck() {
         return userDeck;
     }
 
-    public int getUserPoints() {
-        for (int i = 0; i < userDeck.size ( ); i++) {
+    int getUserPoints() {
+        int i = 0;
+        while (i < userDeck.size ( )) {
+            i++;
         }
         return userPoints(userDeck);
     }
